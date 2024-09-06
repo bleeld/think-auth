@@ -1,45 +1,21 @@
 {
     "name": "bleeld/think-auth",
-    "description": "This is a collection of auth remote file management drivers developed in factory mode. Users can use different OSS extensions according to their business needs. In the future, developers can further improve more OSS drivers according to their own needs.",
-    "homepage": "https://github.com/bleeld/think-auth",
-    "keywords": [
-        "thinkphp6",
-        "thinkphp8",
-        "auth"
-    ],
-    "license": "MIT",
-	"version": "1.0.0",
-    "authors": [
-        {
-            "name": "bleeld",
-            "email": "bleeld@163.com",
-            "role": "Developer"
-        }
-    ],
-    "support": {
-        "issues": "https://github.com/bleeld/think-jwt/issues"
-    },
+    "description": "this is a auth plug-ins",
+    "type": "library",
     "require": {
-		"php": ">=7.0"
+        "php": "7.0.0"
     },
-    "suggest": {
-        "paragonie/sodium_compat": "Support EdDSA (Ed25519) signatures when libsodium is not present"
-    },
+    "version": "1.0.1",
+    "license": "MIT",
     "autoload": {
         "psr-4": {
-			"think\\": "src/"
+            "think\\auth\\": "src/"
         }
     },
-    "extra": {
-        "think": {
-            "config":{
-                "auth": "src/config/auth.php"
-            }
+    "authors": [
+        {
+            "name": "bleeld"
         }
-    },
-    "scripts" : {
-        "post-install-cmd": [
-            "php think auth:config"
-        ]
-    }
+    ],
+    "minimum-stability": "dev"
 }
