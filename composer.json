@@ -1,21 +1,33 @@
 {
-    "name": "bleeld/think-auth",
-    "description": "this is a auth plug-ins",
+    "name": "bleeld/think-jwt",
+    "description": "this is a jwt plug-ins",
     "type": "library",
     "require": {
-        "php": "7.0.0"
+        "php": ">=7.0.0"
     },
-    "version": "1.0.1",
+    "version": "1.0.2",
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "think\\auth\\": "src/"
-        }
+            "think\\": "src/"
+        },
+        "files": []
     },
     "authors": [
         {
             "name": "bleeld"
         }
     ],
-    "minimum-stability": "dev"
+    "extra": {
+        "think": {
+            "config":{
+                "jwt": "src/jwt/config/jwt.php"
+            }
+        }
+    },
+    "scripts" : {
+        "post-install-cmd": [
+            "php think jwt:config"
+        ]
+    }
 }
