@@ -1,0 +1,33 @@
+{
+    "name": "bleeld/think-auth",
+    "description": "this is a auth plug-ins",
+    "type": "library",
+    "require": {
+        "php": ">=7.0.0"
+    },
+    "version": "1.0.0",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "think\\": "src/"
+        },
+        "files": []
+    },
+    "authors": [
+        {
+            "name": "bleeld"
+        }
+    ],
+    "extra": {
+        "think": {
+            "config":{
+                "auth": "src/config/auth.php"
+            }
+        }
+    },
+    "scripts" : {
+        "post-install-cmd": [
+            "php think auth:config"
+        ]
+    }
+}
